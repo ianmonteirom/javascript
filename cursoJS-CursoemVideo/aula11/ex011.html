@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferidor de Nacionalidade</title>
+    <style>
+        body {
+            font: 15pt Arial;
+        }
+        div#res {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é Brasileiro?</h1>
+    Digite o país onde vive: <input type="text" name="txtp" id="txtpaís">
+    <input type="button" value="Confirmar"onclick="confirmar()">
+    <div id="res"></div>
+
+    <script>
+        function confirmar() {
+            var txtp = window.document.querySelector('input#txtpaís')
+            var res = window.document.querySelector('div#res')
+            país = String(txtp.value)
+            if (país == 'Brasil' || país == 'brasil'){
+                res.innerHTML = `Você é Brasileiro!`
+            }else{
+                res.innerHTML = `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+</html>
